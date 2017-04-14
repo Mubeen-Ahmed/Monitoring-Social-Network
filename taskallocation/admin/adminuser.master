@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="adminuser.master.cs" Inherits="admin_adminuser" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+            height: 359px;
+        }
+        .style2
+        {
+            height: 59px;
+        }
+        .style3
+        {
+            height: 59px;
+            width: 213px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    </div>
+    <table class="style1">
+        <tr>
+            <td align="center" colspan="2">
+&nbsp; Welcome Admin</td>
+        </tr>
+        <tr>
+            <td align="right" colspan="2">
+                <asp:Label ID="Label1" runat="server"></asp:Label>
+&nbsp;&nbsp; |&nbsp;&nbsp;
+                <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click" 
+                    PostBackUrl="~/signout.aspx">Sign Out</asp:LinkButton>
+            </td>
+        </tr>
+        <tr>
+            <td class="style3">
+                <asp:Menu ID="Menu1" runat="server" Font-Underline="True" Height="299px" 
+                    Width="141px">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/frmgeneralhome.aspx" Text="Home" Value="Home">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="New Designation" Value="New Designation" 
+                            NavigateUrl="~/admin/new designation.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="View Designation" Value="View Designation" 
+                            NavigateUrl="~/admin/view designation.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Employee Registration" Value="Employee Registration" 
+                            NavigateUrl="~/admin/employee registration.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="View Employee" Value="View Employee" 
+                            NavigateUrl="~/admin/employeedisplay.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Register New Project" Value="Register New Project" 
+                            NavigateUrl="~/admin/frmprojects.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="View Project" Value="View Project" 
+                            NavigateUrl="~/admin/view projects.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Sign Out" Value="Sign Out" NavigateUrl="~/signout.aspx"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/admin/viewemployeedemo.aspx" 
+                            Text="viewemployeedemo" Value="viewemployeedemo"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </td>
+            <td class="style2">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="color: #000000; background-color: #0066FF;">
+                Copyright @2011</td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
